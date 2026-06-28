@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estamos fora do ar</title>
+<title>Página não encontrada</title>
 
 <style>
 *{
@@ -27,23 +27,51 @@ body{
 
 main{
     max-width:600px;
+    width:100%;
+}
+
+@keyframes wobble {
+    0%,100% { transform: rotate(0deg); }
+    20%      { transform: rotate(-6deg); }
+    40%      { transform: rotate(6deg); }
+    60%      { transform: rotate(-4deg); }
+    80%      { transform: rotate(4deg); }
 }
 
 img{
-    width:320px;
+    width:min(260px, 60vw);
     margin-bottom:30px;
+    animation: wobble 2.5s ease-in-out infinite;
+    transform-origin: bottom center;
 }
 
 h1{
-    font-size:4rem;
+    font-size:clamp(2rem, 8vw, 4rem);
     font-weight:600;
     margin-bottom:15px;
 }
 
 p{
-    font-size:1.2rem;
+    font-size:clamp(1rem, 4vw, 1.2rem);
     color:#c6d3e6;
     line-height:1.6;
+    margin-bottom:30px;
+}
+
+a{
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 28px;
+    background:#1a4a7a;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:clamp(0.9rem, 4vw, 1rem);
+    transition:background 0.2s;
+}
+
+a:hover{
+    background:#2060a0;
 }
 </style>
 </head>
@@ -54,12 +82,14 @@ p{
 
     <img src="/cat.png" alt="Gatinho">
 
-    <h1>Estamos fora do ar.</h1>
+    <h1>Página não encontrada.</h1>
 
     <p>
-        Estamos realizando uma manutenção para melhorar nossos serviços.
-        Em breve o site estará disponível novamente.
+        Essa página não existe ou foi removida.<br>
+        Volte para o início e encontre o que precisa.
     </p>
+
+    <a href="/">Voltar para o início</a>
 
 </main>
 
